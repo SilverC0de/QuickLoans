@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:padding="8dp"
+            android:textColor="@color/colorText"
+            android:text="Quick loans terms of use" />
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorText"
+            android:padding="12dp"
+            android:lineSpacingExtra="6dp"
+            android:text="@string/agreement"/>
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="6dp"
+            android:textSize="14sp"
+            android:textColor="@color/colorText"
+            android:id="@+id/agree_checker"
+            android:text="By clicking on the button below, you agree to our terms of use"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="I Agree"
+            android:id="@+id/agree"
+            android:alpha=".4"
+            android:enabled="false"
+            android:textColor="@color/colorPrimary"
+            android:background="@drawable/button" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

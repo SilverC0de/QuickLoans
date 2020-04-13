@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorTransparent">#00000000</color>
+    <color name="colorAccent">#7E57C2</color>
+    <color name="colorAsh">#F4F4F4</color>
+
+    <color name="colorButton">#515E9C</color>
+    <color name="colorHint">#C8C8C8</color>
+    <color name="colorText">#222222</color>
+
+    <color name="colorPurpleLite">#47D1C4E9</color>
+    <color name="colorPurple">#80B39DDB</color>
+    <color name="colorPurplePro">#B39DDB</color>
+    <color name="colorTextLite">#888888</color>
+    <color name="colorTextError">#EF5350</color>
+    <color name="colorTextHint">#888888</color>
+
+
+    <array name="array_dot_active">
+        <item>#CC808080</item>
+        <item>#CC808080</item>
+        <item>#CC808080</item>
+        <item>#CC808080</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>#B3D6D6D6</item>
+        <item>#B3D6D6D6</item>
+        <item>#B3D6D6D6</item>
+        <item>#B3D6D6D6</item>
+    </array>
+</resources>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary">
+    <Space
+        android:layout_width="match_parent"
+        android:layout_height="20dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:padding="12dp"
+        android:textColor="@color/colorText"
+        android:text="Loan is processing" />
+    <ImageView
+        android:id="@+id/history_illustration"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:src="@drawable/success"
+        android:layout_gravity="center" />
+    <TextView
+        android:id="@+id/history_message"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:padding="12dp"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:text="You will get a response from us soon"
+        android:textColor="@color/colorText" />
+    <Button
+        android:id="@+id/end"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:textColor="@color/colorPrimary"
+        android:text="Continue"
+        android:layout_margin="8dp"
+        style="?attr/borderlessButtonStyle"/>
+</LinearLayout>

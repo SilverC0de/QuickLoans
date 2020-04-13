@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:background="@color/colorPrimary"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="88dp"
+        android:id="@+id/scroller">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/colorText"
+                android:text="Accept loan offer" />
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="8dp" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="8dp"
+                android:paddingTop="4dp"
+                android:background="@drawable/card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="40dp"
+                        android:alpha=".8"
+                        android:src="@drawable/fluxpay1" />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="2" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/cardx"
+                        android:id="@+id/cash_days"
+                        android:paddingStart="40dp"
+                        android:paddingEnd="40dp"
+                        android:paddingTop="8dp"
+                        android:paddingBottom="8dp"
+                        android:layout_gravity="end"
+                        android:textStyle="bold"
+                        android:textSize="12sp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="4dp"
+                        android:textColor="@color/colorPrimary"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center"
+                    android:paddingStart="20dp"
+                    android:paddingEnd="20dp">
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="&#8358;"
+                        android:layout_marginTop="4dp"
+                        android:textColor="@color/colorText" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="22sp"
+                        android:id="@+id/cash_amount"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorText" />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_weight="9"
+                        android:layout_height="match_parent" />
+                    <FrameLayout
+                        android:layout_width="1px"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:background="@color/colorPurplePro" />
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent" />
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="4dp"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/colorText"
+                            android:textSize="22sp"
+                            android:id="@+id/cash_interest"/>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:textColor="@color/colorText"
+                            android:text="Interest" />
+                    </LinearLayout>
+                </LinearLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="1px"
+                    android:layout_margin="8dp"
+                    android:background="@color/colorPurplePro" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:id="@+id/loan_error"
+                    android:layout_marginStart="12dp"
+                    android:gravity="center"
+                    android:layout_marginBottom="4dp"
+                    android:visibility="gone"
+                    android:textColor="@color/colorTextError" />
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/colorText"
+                android:text="Card details" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:id="@+id/card_error"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/colorTextError" />
+            <EditText
+                android:id="@+id/cash_card_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card"
+                android:layout_margin="8dp"
+                android:hint="Card Holder"
+                android:textSize="14sp"
+                android:padding="12dp"
+                android:textColorHint="@color/colorTextHint"
+                android:textColor="@color/colorText"/>
+            <EditText
+                android:id="@+id/cash_card_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card"
+                android:layout_margin="8dp"
+                android:hint="Card Number"
+                android:textSize="14sp"
+                android:padding="12dp"
+                android:inputType="number"
+                android:maxLength="24"
+                android:textColorHint="@color/colorTextHint"
+                android:textColor="@color/colorText" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/cash_card_cvv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card"
+                    android:layout_margin="8dp"
+                    android:hint="CVV"
+                    android:textSize="14sp"
+                    android:padding="8dp"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textColorHint="@color/colorTextHint"
+                    android:textColor="@color/colorText" />
+                <EditText
+                    android:id="@+id/cash_card_pin"
+                    android:layout_width="0dp"
+                    android:layout_weight="1.2"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card"
+                    android:layout_margin="8dp"
+                    android:hint="Card Pin"
+                    android:textSize="14sp"
+                    android:padding="8dp"
+                    android:inputType="number"
+                    android:maxLength="4"
+                    android:textColorHint="@color/colorTextHint"
+                    android:textColor="@color/colorText" />
+                <Space
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent" />
+                <EditText
+                    android:id="@+id/cash_card_mm"
+                    android:layout_width="0dp"
+                    android:layout_weight=".8"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card"
+                    android:layout_margin="8dp"
+                    android:hint="MM"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:padding="8dp"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textColorHint="@color/colorTextHint"
+                    android:textColor="@color/colorText" />
+                <EditText
+                    android:id="@+id/cash_card_yy"
+                    android:layout_width="0dp"
+                    android:layout_weight=".8"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card"
+                    android:layout_margin="8dp"
+                    android:hint="YY"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:padding="8dp"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:textColorHint="@color/colorTextHint"
+                    android:textColor="@color/colorText" />
+            </LinearLayout>
+            <Space
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/colorText"
+                android:text="Bank details" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:id="@+id/bank_error"
+                android:layout_marginStart="12dp"
+                android:textColor="@color/colorTextError" />
+            <EditText
+                android:id="@+id/cash_account_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/card"
+                android:layout_margin="8dp"
+                android:hint="Account Name"
+                android:textSize="14sp"
+                android:padding="12dp"
+                android:textColorHint="@color/colorTextHint"
+                android:textColor="@color/colorText" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/cash_account_number"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card"
+                    android:layout_margin="8dp"
+                    android:hint="Account Number"
+                    android:textSize="14sp"
+                    android:padding="12dp"
+                    android:inputType="number"
+                    android:maxLength="10"
+                    android:textColorHint="#99000000"
+                    android:textColor="#000000"/>
+                <Spinner
+                    android:id="@+id/cash_bank"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/card"
+                    android:layout_margin="8dp"
+                    android:textSize="14sp"
+                    android:textColor="#000000"/>
+            </LinearLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:padding="8dp"
+                android:textColor="@color/colorTextLite"
+                android:text="@string/terms" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loader"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:visibility="gone"
+        android:layout_centerInParent="true"/>
+
+    <Button
+        android:id="@+id/request"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button"
+        android:textColor="@color/colorPrimary"
+        android:text="Request for loan"
+        android:layout_marginBottom="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        style="?attr/borderlessButtonStyle"/>
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="12sp"
+        android:padding="4dp"
+        android:layout_alignParentBottom="true"
+        android:textColor="@color/colorTextLite"
+        android:text="Powered by FluxPay" />
+</RelativeLayout>
